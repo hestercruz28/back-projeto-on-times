@@ -10,10 +10,10 @@ connectToMongoDB();
 
 app.use(cors());
 
-// Rota para consultar a coleção no MongoDB
+
 app.get('/user', async (req, res) => {
-  const db = client.db('ontime'); // Substitua pelo nome do seu banco de dados
-  const collection = db.collection('user'); // Substitua pelo nome da sua coleção
+  const db = client.db('ontime'); 
+  const collection = db.collection('user'); 
 
   try {
     const result = await collection.find({}).toArray();
